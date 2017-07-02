@@ -22,6 +22,10 @@
 セキュリティとか起動設定とか
 
 # 言語系
-env系のバージョンを確認
+envから手動インストール
+```
+pyenv install anaconda3-4.3.1
+pyenv global anaconda3-4.3.1
+```
 
-
+sshの設定（あとで自動化）

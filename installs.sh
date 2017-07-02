@@ -9,13 +9,15 @@ brew install cmigemo
 ##### コマンド関連 #####
 brew install wget
 brew install nkf
+brew install ssh-copy-id
+brew install jq
 
 ##################################################
 ##### 開発系 #####
 # neovim (xquartz, xclip, cmigemo前提)
 brew install neovim/neovim/neovim
 mkdir .config/nvim/
-ln -s ~/.vimrc ~/.config/nvim/init.vim
+ln -sf ~/.vimrc ~/.config/nvim/init.vim
 
 # 開発
 brew cask install iterm2
@@ -58,6 +60,9 @@ sudo gem install sass
 ##### 色々 #####
 brew cask install google-chrome
 brew cask install gimp
+brew cask install slack
+brew cask install dropbox
+brew cask install evernote
 
 # ブルーライト
 brew cask install flux
