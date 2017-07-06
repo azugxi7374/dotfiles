@@ -1,6 +1,13 @@
 手動設定
 
 # システム関連
+## zsh
+```
+brew install zsh
+sudo vi -u NONE /etc/shells
+chsh -s /usr/local/bin/zsh
+```
+
 ## キーボード関連
 ### キーボード→入力ソース→入力モード
 * 半角カタカナ
