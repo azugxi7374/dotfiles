@@ -44,6 +44,7 @@ anyenv update
 
 anyenv install pyenv 
 pyenv install anaconda3-4.3.1 && pyenv global anaconda3-4.3.1 && pyenv rehash
+brew install pyenv-virtualenv
 anyenv install scalaenv
 scalaenv install scala-2.12.2 && scalaenv global scala-2.12.2 && scalaenv rehash
 anyenv install sbtenv

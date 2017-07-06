@@ -5,7 +5,12 @@ if [ -d $HOME/.anyenv ] ; then
     export PATH="$HOME/.anyenv/bin:$PATH"
     eval "$(anyenv init -)"
 fi
-
+export PYENV_ROOT="${HOME}/.pyenv"
+if [ -d "${PYENV_ROOT}" ]; then
+    export PATH=${PYENV_ROOT}/bin:$PATH
+    eval "$(pyenv init -)"
+    eval "$(pyenv virtualenv-init -)"
+fi
 
 
 # 色を使用出来るようにする
