@@ -10,5 +10,7 @@ git config --global user.email rtk0253@gmail.com
 git config --global core.editor vim
 
 ln -sf ~/dotfiles/.vimrc ~/.vimrc
+mkdir -p ~/.config/nvim
+ln -sf ~/dotfiles/dein.toml ~/.config/nvim/dein.toml
 ln -sf ~/dotfiles/.zshrc ~/.zshrc 
 
