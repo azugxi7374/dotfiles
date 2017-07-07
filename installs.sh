@@ -11,12 +11,13 @@ brew install wget
 brew install nkf
 brew install ssh-copy-id
 brew install jq
+brew install tig
 
 ##################################################
 ##### 開発系 #####
 # neovim (xquartz, xclip, cmigemo前提)
 brew install neovim/neovim/neovim
-mkdir .config/nvim/
+mkdir -p .config/nvim/
 ln -sf ~/.vimrc ~/.config/nvim/init.vim
 
 # 開発
