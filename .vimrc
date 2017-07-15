@@ -1,6 +1,4 @@
-" * 検索時にエラー
-
-
+ 
 " -------------------------------------
 " file -------------
 set encoding=utf-8
@@ -122,7 +120,7 @@ endif
 set runtimepath^=$HOME/.vim/dein/repos/github.com/Shougo/dein.vim
 
 " Required:
-if dein#load_state('~/.vim/dein')
+"if dein#load_state('~/.vim/dein')
     call dein#begin('~/.vim/dein')
 
     " Let dein manage dein
@@ -135,10 +133,6 @@ if dein#load_state('~/.vim/dein')
 
     " You can specify revision/branch/tag.
     call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
-
-    " Required:
-    filetype plugin indent on
-    syntax enable
 
     "
 
@@ -298,7 +292,8 @@ if dein#load_state('~/.vim/dein')
     " Required:
     call dein#end()
     call dein#save_state()
-endif
+"endif
+
 " If you want to install not installed plugins on startup.
 if dein#check_install()
     call dein#install()
