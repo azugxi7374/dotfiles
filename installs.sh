@@ -17,7 +17,7 @@ brew install tig
 ##### 開発系 #####
 # neovim (xquartz, xclip, cmigemo前提)
 brew install neovim/neovim/neovim
-mkdir -p .config/nvim/
+mkdir -p ~/.config/nvim/
 ln -sf ~/.vimrc ~/.config/nvim/init.vim
 # dein
 curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
