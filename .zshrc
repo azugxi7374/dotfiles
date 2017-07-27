@@ -11,7 +11,8 @@ if [ -d "${PYENV_ROOT}" ]; then
     eval "$(pyenv init -)"
     eval "$(pyenv virtualenv-init -)"
 fi
-
+export BROWSER=open
+export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 # 色を使用出来るようにする
 autoload -Uz colors
