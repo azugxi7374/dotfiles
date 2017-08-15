@@ -310,4 +310,5 @@ filetype plugin indent on
 
 colorscheme hybrid
 set background=dark
+" set background=light
 syntax on

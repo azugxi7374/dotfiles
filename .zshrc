@@ -138,6 +138,8 @@ alias sudo='sudo '
 alias -g L='| less'
 alias -g G='| grep'
 
+alias shrestart='exec -l $SHELL'
+
 if type nvim >/dev/null 2>&1; then
     alias vim='nvim'
 fi
