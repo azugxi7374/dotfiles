@@ -140,6 +140,14 @@ alias -g G='| grep'
 
 alias shrestart='exec -l $SHELL'
 
+function archive() {
+    date=$(date "+%y%m%d")
+    dir=$HOME/archived/$date
+    mkdir $dir
+    mv $* $dir
+}
+alias arm='archive'
+
 if type nvim >/dev/null 2>&1; then
     alias vim='nvim'
 fi
