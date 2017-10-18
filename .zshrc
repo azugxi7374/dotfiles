@@ -4,6 +4,7 @@ export LANG=ja_JP.UTF-8
 export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
 export BROWSER=open
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
@@ -133,20 +134,12 @@ alias -g G='| grep'
 
 alias shrestart='exec -l $SHELL'
 
-function archive() {
-    date=$(date "+%y%m%d")
-    dir=$HOME/archived/$date
-    mkdir $dir
-    mv $* $dir
-}
-alias arm='archive'
-
 if type nvim >/dev/null 2>&1; then
     alias vim='nvim'
 fi
 
-# cdのあとlsを実行
-chpwd() { ls }
+# cdのあとlaを実行
+chpwd() { ls -a }
 
 
 # C で標準出力をクリップボードにコピーする
