@@ -37,27 +37,11 @@ brew cask install shiftit
 ##################################################
 ##### 言語系 #####
 brew cask install java
+brew install scala
+brew install sbt
 
-# anyenv
-git clone https://github.com/riywo/anyenv ~/.anyenv
-export PATH="$HOME/.anyenv/bin:$PATH"
-eval "$(anyenv init -)"
-## anyenv-update
-mkdir -p $(anyenv root)/plugins
-git clone https://github.com/znz/anyenv-update.git $(anyenv root)/plugins/anyenv-update
-anyenv update
-
-anyenv install pyenv 
-pyenv install anaconda3-4.3.1 && pyenv global anaconda3-4.3.1 && pyenv rehash
-brew install pyenv-virtualenv
-anyenv install scalaenv
-scalaenv install scala-2.12.2 && scalaenv global scala-2.12.2 && scalaenv rehash
-anyenv install sbtenv
-sbtenv install sbt-0.13.9 && sbtenv global sbt-0.13.9 && sbtenv rehash
-anyenv install rbenv 
-anyenv install ndenv
-ndenv install v7.10.0 && ndenv global v7.10.0　&& ndenv rehash
-
+# python
+curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash
 
 sudo gem install sass
 
