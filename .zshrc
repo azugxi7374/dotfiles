@@ -1,12 +1,18 @@
 ########################################
 # 環境変数
 export LANG=ja_JP.UTF-8
+
+export PATH="$HOME/bin:$PATH"
+chmod a+x $HOME/bin/*
+
 export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+
+export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 export BROWSER=open
-export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 # 色を使用出来るようにする
 autoload -Uz colors
