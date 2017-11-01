@@ -13,6 +13,8 @@ brew install ssh-copy-id
 brew install jq
 brew install tig
 
+curl -L https://raw.githubusercontent.com/dankogai/osx-mv2trash/master/bin/mv2trash > ~/bin/mv2trash
+
 ##################################################
 ##### 開発系 #####
 # neovim (xquartz, xclip, cmigemo前提)
@@ -42,6 +44,9 @@ brew install sbt
 
 # python
 curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash
+
+# node
+curl -L git.io/nodebrew | perl - setup
 
 sudo gem install sass
 
