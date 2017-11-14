@@ -11,6 +11,8 @@ eval "$(pyenv virtualenv-init -)"
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 export PATH=$HOME/.nodebrew/current/bin:$PATH
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
 export BROWSER=open
 
