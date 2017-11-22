@@ -133,6 +133,8 @@ alias mv='mv -i'
 
 alias mkdir='mkdir -p'
 
+alias uniq='LC_ALL=C uniq'
+
 # sudo の後のコマンドでエイリアスを有効にする
 alias sudo='sudo '
 
