@@ -16,6 +16,11 @@ export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
 export BROWSER=open
 
+## go
+export GOPATH="$HOME/go"
+export PATH=$GOPATH/bin:$PATH
+
+
 # 色を使用出来るようにする
 autoload -Uz colors
 colors
