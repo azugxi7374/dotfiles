@@ -16,6 +16,9 @@ export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
 export BROWSER=open
 
+export LESS="-IRMNW"
+export LESSOPEN=""
+
 ## go
 export GOPATH="$HOME/go"
 export PATH=$GOPATH/bin:$PATH
