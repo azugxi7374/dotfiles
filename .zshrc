@@ -171,6 +171,14 @@ elif which putclip >/dev/null 2>&1 ; then
 fi
 
 
+stw() {
+    date1=`date +%s`; while true; do
+    echo -ne "\r$(date -u --date @$((`date +%s` - $date1)) +%H:%M:%S)";
+done
+}
+
+
+
 
 ########################################
 # OS 別の設定
