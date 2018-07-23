@@ -16,9 +16,6 @@ export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
 export BROWSER=open
 
-export LESS="-IRMNW"
-export LESSOPEN=""
-
 ## go
 export GOPATH="$HOME/go"
 export PATH=$GOPATH/bin:$PATH
@@ -138,6 +135,8 @@ alias ll='ls -l'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
+
+alias less='less -IRMNW'
 
 alias mkdir='mkdir -p'
 
