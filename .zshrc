@@ -129,6 +129,8 @@ bindkey '^R' history-incremental-pattern-search-backward
 
 ########################################
 # エイリアス
+excmd() { type $1 >/dev/null 2>&1 }
+
 alias ls='ls --color'
 
 alias la='ls -a'
@@ -157,8 +159,12 @@ if type nvim >/dev/null 2>&1; then
     alias vim='nvim'
 fi
 
+if excmd highlight; then
+    alias hl='env FORCE_COLOR=1 highlight'
+fi
+
 # cdのあとlaを実行
-chpwd() { ls -a }
+chpwd() { ls -a -C | head }
 
 
 # C で標準出力をクリップボードにコピーする
