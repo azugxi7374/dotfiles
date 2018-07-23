@@ -7,6 +7,7 @@ brew install cmigemo
 
 ##################################################
 ##### コマンド関連 #####
+brew install coreutils
 brew install wget
 brew install nkf
 brew install ssh-copy-id

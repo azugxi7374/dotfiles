@@ -15,6 +15,7 @@ export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
 export BROWSER=open
+export CLICOLOR=1
 
 ## go
 export GOPATH="$HOME/go"
@@ -128,6 +129,7 @@ bindkey '^R' history-incremental-pattern-search-backward
 
 ########################################
 # エイリアス
+alias ls='ls --color'
 
 alias la='ls -a'
 alias ll='ls -l'
@@ -178,26 +180,6 @@ stw() {
     echo -ne "\r$(date -u --date @$((`date +%s` - $date1)) +%H:%M:%S)";
 done
 }
-
-
-
-
-########################################
-# OS 別の設定
-case ${OSTYPE} in
-    darwin*)
-        #Mac用の設定
-        export CLICOLOR=1
-        alias ls='ls -G -F'
-        ;;
-    linux*)
-        #Linux用の設定
-        alias ls='ls -F --color=auto'
-        ;;
-esac
-
-# vim:set ft=zsh:
-
 
 
 
