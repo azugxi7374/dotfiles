@@ -1,0 +1,23 @@
+#!/bin/zsh
+_FPATH="$DOTFILES_DIR/installs.sh"
+
+echo "=== brew install ==="
+_LFILE=`grep -E 'brew[^(cask)]]*install' $_FPATH | cut -d ' ' -f 3`
+_LPC=`brew list`
+echo "- not installed yet:"
+ldf <( echo $_LPC) <( echo $_LFILE )
+echo "- installed but not in dotfile:"
+ldf <( echo $_LFILE ) <( echo $_LPC )
+echo ""
+
+
+echo "=== brew cask install ==="
+_LFILE=`grep -E 'brew.+cask.+install' $_FPATH | cut -d ' ' -f 4`
+_LPC=`brew cask list`
+echo "- not installed yet:"
+ldf <( echo $_LPC) <( echo $_LFILE )
+echo "- installed but not in dotfile:"
+ldf <( echo $_LFILE ) <( echo $_LPC )
+echo ""
+
+

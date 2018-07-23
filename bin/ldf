@@ -1,0 +1,9 @@
+#!/bin/zsh
+# print lines only exists in LEFT file
+echo "diff $1 and $2"
+{
+    cat $1 | sort -u;
+    cat $2 $2
+} | sort | uniq -u
+
+exit 0

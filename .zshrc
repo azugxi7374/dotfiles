@@ -2,15 +2,15 @@
 # 環境変数
 export LANG=ja_JP.UTF-8
 
-export PATH="$HOME/bin:$PATH"
-chmod a+x $HOME/bin/*
+export PATH="$HOME/bin_local:$PATH"
+export PATH="$HOME/bin_common:$PATH"
 
 export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
-export PATH=$HOME/.nodebrew/current/bin:$PATH
+export PATH="$HOME/.nodebrew/current/bin:$PATH"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
@@ -149,13 +149,12 @@ alias uniq='LC_ALL=C uniq'
 # sudo の後のコマンドでエイリアスを有効にする
 alias sudo='sudo '
 
-# グローバルエイリアス
-alias -g L='| less'
-alias -g G='| grep'
+alias L='less'
+alias G='grep'
 
 alias shrestart='exec -l $SHELL'
 
-if type nvim >/dev/null 2>&1; then
+if excmd nvim; then
     alias vim='nvim'
 fi
 
@@ -163,30 +162,18 @@ if excmd highlight; then
     alias hl='env FORCE_COLOR=1 highlight'
 fi
 
+if excmd pbcopy; then
+    alias C='pbcopy'
+fi
+if excmd pbpaste; then
+    alias P='pbpaste'
+fi
+
 # cdのあとlaを実行
 chpwd() { ls -a -C | head }
 
 
-# C で標準出力をクリップボードにコピーする
-# mollifier delta blog : http://mollifier.hatenablog.com/entry/20100317/p1
-if which pbcopy >/dev/null 2>&1 ; then
-    # Mac
-    alias -g C='| pbcopy'
-elif which xsel >/dev/null 2>&1 ; then
-    # Linux
-    alias -g C='| xsel --input --clipboard'
-elif which putclip >/dev/null 2>&1 ; then
-    # Cygwin
-    alias -g C='| putclip'
-fi
-
-
-stw() {
-    date1=`date +%s`; while true; do
-    echo -ne "\r$(date -u --date @$((`date +%s` - $date1)) +%H:%M:%S)";
-done
-}
-
-
+# PATHの重複を削除
+typeset -U PATH
 
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local

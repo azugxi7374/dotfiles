@@ -1,0 +1,10 @@
+#!/bin/zsh
+if [ -d "$1" ] ; then
+	_DIR=$1
+elif [ -e "$1" ] ; then
+	_DIR=$(dirname $1)
+else 
+	exit 1
+fi
+echo "DIR=$_DIR"
+echo $(cd $_DIR && pwd)
