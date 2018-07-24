@@ -170,7 +170,7 @@ if excmd pbpaste; then
 fi
 
 # cdのあとlaを実行
-chpwd() { ls -a -C | head }
+chpwd() { ls -ax }
 
 
 # PATHの重複を削除
