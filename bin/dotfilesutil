@@ -1,0 +1,16 @@
+#!/bin/zsh
+
+_list=`ls $DOTFILES_DIR/lib`
+
+_match=$(grep -e "$1" <(echo $_list))
+_num=$(echo $_match | grep -e '\S' | wc -l)
+
+# echo "[$_match]" $_num `echo $_match | wc -c`
+if [ -z "$1" -o $_num -eq 0 ]; then
+    echo $_list | sed -e 's/^/- /g'
+elif [ -n $_match -a $_num -eq 1 ]; then
+    echo "run $_match..."
+    $DOTFILES_DIR/lib/$_match
+else
+    echo $_match | sed -e 's/^/- /g'
+fi
