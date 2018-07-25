@@ -2,8 +2,8 @@
 # 環境変数
 export LANG=ja_JP.UTF-8
 
-export PATH="$HOME/bin:$PATH"
-chmod a+x $HOME/bin/*
+export PATH="$HOME/bin_local:$PATH"
+export PATH="$HOME/bin_common:$PATH"
 
 export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
@@ -181,11 +181,6 @@ elif which putclip >/dev/null 2>&1 ; then
 fi
 
 
-stw() {
-    date1=`date +%s`; while true; do
-    echo -ne "\r$(date -u --date @$((`date +%s` - $date1)) +%H:%M:%S)";
-done
-}
 
 
 

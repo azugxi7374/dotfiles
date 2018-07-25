@@ -1,0 +1,7 @@
+#!/bin/zsh
+echo -n "$1 [Y/n]"
+read ANS_YN
+case $ANS_YN in  "" | "Y" | "y" | "yes" | "Yes" | "YES" ) exit 0;;
+    * ) exit 1;;
+esac
+
