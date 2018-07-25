@@ -1,0 +1,44 @@
+#!/bin/zsh
+
+_name=`basename $0`
+
+help() {
+    echo "run command with temp files."
+    echo "usage: $_name [options] command"
+    echo "\t-h"
+    echo "\t-n <number of temp files>"
+}
+
+
+_N=1
+
+while getopts hn: OPT
+do
+    case $OPT in
+        "h" ) help; exit 0;;
+        "n" ) _N=$OPTARG ;;
+         * ) help; exit 1;;
+    esac
+done
+shift `expr $OPTIND - 1`
+
+if [ -z "$1" ] ; then
+    help; exit 1
+fi
+
+_tmps=()
+
+for i in `seq $_N`; do
+    _file="`mktemp`"
+    _tmps+=("$_file")
+    chmod 777 $_file
+    trap "echo $_file; rm -f $_file" 0 1 2 3
+done
+
+# trap "rm -f ${_tmps[*]}" 0 1 2 3
+
+$($1 "${_tmps[@]}")
+
+sleep 10
+
+

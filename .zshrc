@@ -172,6 +172,10 @@ fi
 # cdのあとlaを実行
 chpwd() { ls -ax }
 
+# TRAPINT() {
+  # print '(ﾉ`Д´)ﾉ.:･┻┻ ｵﾘｬｰ'
+  # return $(( 128 + $1 ))
+# }
 
 # PATHの重複を削除
 typeset -U PATH
