@@ -140,7 +140,9 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 
-alias less='less -IRMNW'
+# alias less='less -IRMNW'
+export LESS='-IRMNW'
+
 
 alias mkdir='mkdir -p'
 
@@ -159,7 +161,9 @@ if excmd nvim; then
 fi
 
 if excmd highlight; then
-    alias hl='env FORCE_COLOR=1 highlight'
+    # alias hl='env FORCE_COLOR=1 highlight'
+    hl() { env FORCE_COLOR=1 highlight $* }
+    lhl() { hl $1 | less }
 fi
 
 if excmd pbcopy; then
