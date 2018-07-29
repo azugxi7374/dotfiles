@@ -18,6 +18,8 @@ brew install pandoc
 
 curl -L https://raw.githubusercontent.com/dankogai/osx-mv2trash/master/bin/mv2trash > ~/bin/mv2trash
 
+curl -L https://iterm2.com/shell_integration/zsh -o ~/.iterm2_shell_integration.zsh
+
 ##################################################
 ##### 開発系 #####
 # neovim (xquartz, xclip, cmigemo前提)

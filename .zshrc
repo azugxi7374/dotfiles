@@ -184,4 +184,5 @@ chpwd() { ls -ax }
 # PATHの重複を削除
 typeset -U PATH
 
+[ -f ~/.iterm2_shell_integration.zsh ] && source ~/.iterm2_shell_integration.zsh
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
