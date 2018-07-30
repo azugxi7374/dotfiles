@@ -163,7 +163,7 @@ fi
 if excmd highlight; then
     # alias hl='env FORCE_COLOR=1 highlight'
     hl() { env FORCE_COLOR=1 highlight $* }
-    lhl() { hl $1 | less }
+    lhl() { hl $* | less }
 fi
 
 if excmd pbcopy; then
