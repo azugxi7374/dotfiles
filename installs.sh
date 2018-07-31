@@ -15,6 +15,7 @@ brew install jq
 brew install tig
 brew install colordiff
 brew install pandoc
+brew install pstree
 
 curl -L https://raw.githubusercontent.com/dankogai/osx-mv2trash/master/bin/mv2trash > ~/bin/mv2trash
 
