@@ -70,8 +70,8 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 # 日付と時刻のフォーマット
 defaults write com.apple.menuextra.clock DateFormat -string "M\u6708d\u65e5(EEE)  H:mm:ss"
-
-
+# スクショの場所
+defaults write com.apple.screencapture location ~/Pictures/screenshot/
 
 
 
