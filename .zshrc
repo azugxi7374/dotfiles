@@ -173,6 +173,10 @@ if excmd pbpaste; then
     alias P='pbpaste'
 fi
 
+if excmd jq; then
+    alias jq='jq -C'
+fi
+
 # cdのあとlaを実行
 chpwd() { ls -ax }
 
