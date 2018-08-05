@@ -156,6 +156,8 @@ alias G='grep'
 
 alias shrestart='exec -l $SHELL'
 
+alias trs='rmtrash'
+
 if excmd nvim; then
     alias vim='nvim'
 fi
