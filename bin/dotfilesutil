@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-_list=`ls $DOTFILES_DIR/lib`
+_list=`ls $DOTFILES_DIR/lib/dotfilesutil`
 
 _match=$(grep -e "$1" <(echo $_list))
 _num=$(echo $_match | grep -e '\S' | wc -l)
