@@ -179,7 +179,7 @@ if excmd pbpaste; then
 fi
 
 if excmd jq; then
-    alias jq='jq -C'
+    alias jqc='jq -C'
 fi
 
 # cdのあとlaを実行
