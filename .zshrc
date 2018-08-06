@@ -158,6 +158,9 @@ alias shrestart='exec -l $SHELL'
 
 alias trs='rmtrash'
 
+if excmd colordiff; then
+    alias diff='colordiff'
+fi
 if excmd nvim; then
     alias vim='nvim'
 fi
