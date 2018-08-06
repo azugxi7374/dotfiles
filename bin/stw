@@ -1,6 +1,41 @@
 #!/bin/zsh
-date1=`date +%s`
+
+skipmin=0
+
+print_help() {
+    cat <<EOF
+usage:
+    -h: help
+    -s <min>: skip <min> minutes
+EOF
+}
+
+timer() {
+    :;
+}
+
+
+while getopts hs:t: OPT
+do
+  case $OPT in
+    "h" ) print_help; exit 0;;
+    "s" ) skipmin=$OPTARG ;;
+    "t" ) timer ;;
+    * ) print_help; exit 1;;
+  esac
+done
+
+shift `expr $OPTIND - 1`
+mes=$1
+
+sdate=$((`date +%s` - $skipmin * 60))
+
+stime=$(date --date @$sdate +%H:%M:%S)
+
 while true; do
-    echo -ne "\r$(date -u --date @$((`date +%s` - $date1)) +%H:%M:%S)"
+    eltime=$(date -u --date @$(( $(date +%s) - $sdate)) +%H:%M:%S)
+    echo -ne "\r[$stime~] $mes: $eltime"
     sleep 1
 done
+
+
