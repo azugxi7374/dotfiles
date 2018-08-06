@@ -5,4 +5,4 @@ def rec_map_values(after):
         after
     end;
 
-rec_map_values
+rec_map_values(type)
