@@ -180,7 +180,15 @@ fi
 
 if excmd jq; then
     alias jqc='jq -C'
+    jql() {
+        case $# in
+            0 ) jq -C '.' | less ;;
+            1 ) jq -C '.' $1 | less;;
+            * ) jq -C $* | less;;
+        esac
+    }
 fi
+
 
 # cdのあとlaを実行
 chpwd() { ls -ax }
