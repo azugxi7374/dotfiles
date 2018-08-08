@@ -13,6 +13,7 @@ if ynq "setup synbolic links?" ; then
     ln -sf $DOTFILES_DIR/dein.toml ~/.config/nvim/dein.toml
     ln -sf $DOTFILES_DIR/.zshrc ~/.zshrc 
     ln -sf $DOTFILES_DIR/bin ~/bin_common
+    ln -sf $DOTFILES_DIR/lib/jq ~/.jq
 fi
 
 if ynq "setup homebrew?" ; then
