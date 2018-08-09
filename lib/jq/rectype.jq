@@ -1,4 +1,4 @@
-def rec_type:
+def rectype:
     if type=="object" then
         map_values(rec_type)
     elif type=="array" then
@@ -6,5 +6,3 @@ def rec_type:
     else
         type
     end;
-
-rec_type
