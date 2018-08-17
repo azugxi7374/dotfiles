@@ -65,6 +65,8 @@ go get -u github.com/k0kubun/pp
 go get -u golang.org/x/tools/cmd/godoc
 go get -u golang.org/x/tools/cmd/goimports
 
+go get github.com/fiatjaf/jiq/cmd/jiq
+
 ##################################################
 ##### 色々 #####
 brew cask install google-chrome
